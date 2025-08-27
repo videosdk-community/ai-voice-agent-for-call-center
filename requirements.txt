@@ -1,0 +1,6 @@
+videosdk-agents
+videosdk-plugins-deepgram
+videosdk-plugins-openai
+videosdk-plugins-elevenlabs
+videosdk-plugins-silero
+videosdk-plugins-turn-detector
