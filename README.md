@@ -12,7 +12,7 @@
 
 
 
-This repository contains ai voice agent for call center, built using the VideoSDK Agents architecture with a [cascading pipeline](https://docs.videosdk.live/ai_agents/core-components/cascading-pipeline).
+This repository contains ai voice agent for call center, built using the VideoSDK Agents architecture with a [Pipeline (Cascade Mode)](https://docs.videosdk.live/ai_agents/core-components/pipeline).
 
 ## Description
 
@@ -20,7 +20,7 @@ This Agent is designed to act as a helpful assistant as ai voice agent for call 
 
 ## Features
 
-- **Cascading Pipeline:** Uses a Speech-to-Text (STT), Large Language Model (LLM), and Text-to-Speech (TTS) pipeline.
+- **Pipeline (Cascade Mode):** Uses a Speech-to-Text (STT), Large Language Model (LLM), and Text-to-Speech (TTS) pipeline.
 - **Real-time Interaction:** Provides a conversational experience.
 - **Customizable:** The agent's instructions can be easily modified in `main.py`.
 
@@ -81,7 +81,7 @@ python main.py
 
 ## How It Works
 
-The agent uses a cascading pipeline:
+The agent uses a Pipeline (Cascade Mode):
 1. **DeepgramSTT:** Transcribes the user's speech to text.
 2. **OpenAILLM:** Generates a response based on the transcribed text and the agent's instructions.
 3. **ElevenLabsTTS:** Converts the LLM's text response into speech.
@@ -98,13 +98,25 @@ The `main.py` file contains the complete logic for the AI Voice Agent.
 
 - **`start_session` function:** This is the main asynchronous function that sets up and runs the agent.
     - It initializes `MyVoiceAgent`.
-    - It creates a `CascadingPipeline`, which is the core of the agent's functionality. This pipeline connects the STT, LLM, and TTS services.
+    - It creates a `Pipeline`, which is the core of the agent's functionality. This pipeline connects the STT, LLM, and TTS services.
     - An `AgentSession` is created to manage the agent's connection and interaction.
-    - `context.connect()` and `session.start()` connect the agent to a room and start the session.
+    - `session.start(wait_for_participant=True, run_until_shutdown=True)` connects the agent to a room and starts the session.
 
 - **`make_context` function:** This function prepares the `JobContext`, which includes `RoomOptions`. The `playground=True` setting allows you to easily test the agent in a VideoSDK playground environment.
 
 - **`if __name__ == "__main__":`:** This block starts the agent by creating and running a `WorkerJob`.
+
+## VideoSDK Agents
+
+Build and deploy production-ready AI voice & video agents with [VideoSDK](https://videosdk.live). This repo is your central hub for agent templates, feature examples, and everything you need to ship real-world AI-powered applications.
+
+| Resource | Description |
+|---|---|
+| 🚀 [Use Case Examples](https://github.com/videosdk-live/agents/tree/main/use_case_examples) | Production-ready templates across Customer Support, Healthcare, Tech Support & more |
+| ⚡ [Feature Examples](https://github.com/videosdk-live/agents/tree/main/examples) | Always up-to-date examples showcasing the latest VideoSDK Agent features |
+| 📖 [AI Agents Docs](https://docs.videosdk.live/ai_agents/introduction) | Full guides, concepts & API references to get you started |
+
+> ⭐ If this helps you, star this repo and [`videosdk-live/agents`](https://github.com/videosdk-live/agents) — it keeps us motivated to ship more!
 
 ## License
 
