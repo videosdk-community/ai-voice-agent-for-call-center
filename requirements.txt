@@ -1,6 +1,6 @@
-videosdk-agents>=1.0.0
-videosdk-plugins-deepgram>=1.0.0
-videosdk-plugins-openai>=1.0.0
-videosdk-plugins-elevenlabs>=1.0.0
-videosdk-plugins-silero>=1.0.0
-videosdk-plugins-turn-detector>=1.0.0
+videosdk-agents>=1.0.10
+videosdk-plugins-deepgram>=1.0.10
+videosdk-plugins-openai>=1.0.10
+videosdk-plugins-elevenlabs>=1.0.10
+videosdk-plugins-silero>=1.0.10
+videosdk-plugins-turn-detector>=1.0.10

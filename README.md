@@ -29,7 +29,7 @@ This Agent is designed to act as a helpful assistant as ai voice agent for call 
 ### Prerequisites
 
 - Python 3.12 or higher
-- A VideoSDK Authentication [Token](https://app.videosdk.live?utm_source=ai-voice-agent-for-call-center&utm_medium=github-repo-auto&utm_campaign=github-repo-auto)
+- A VideoSDK [API Key and Secret Key](https://app.videosdk.live?utm_source=ai-voice-agent-for-call-center&utm_medium=github-repo-auto&utm_campaign=github-repo-auto)
 - API keys for [Deepgram](https://console.deepgram.com), [OpenAI](https://platform.openai.com/api-keys), and [ElevenLabs](https://elevenlabs.io/app/developers/api-keys)
 
 ### Installation
@@ -70,7 +70,8 @@ This Agent is designed to act as a helpful assistant as ai voice agent for call 
    DEEPGRAM_API_KEY=<Your Deepgram API Key>
    OPENAI_API_KEY=<Your OpenAI API Key>
    ELEVENLABS_API_KEY=<Your ElevenLabs API Key>
-   VIDEOSDK_AUTH_TOKEN=<VideoSDK Auth token>
+   VIDEOSDK_API_KEY=<VideoSDK API Key>
+   VIDEOSDK_SECRET_KEY=<VideoSDK Secret Key>
    ```
 
 ### Running the Agent
